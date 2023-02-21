@@ -62,6 +62,14 @@ class _RippleAnimationState extends State<RippleAnimation>
   }
 
   @override
+  void dispose() {
+    _radiusController;
+    _rotationController;
+    _controller;
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepPurple[300],
@@ -76,6 +84,11 @@ class _RippleAnimationState extends State<RippleAnimation>
                 height: 290,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radiusController.value),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.8),
+                        offset: const Offset(6, 6)),
+                  ],
                   color: Colors.deepPurple[900],
                 ),
               ),
@@ -87,6 +100,11 @@ class _RippleAnimationState extends State<RippleAnimation>
                 height: 240,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radiusController.value),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.6),
+                        offset: const Offset(6, 6)),
+                  ],
                   color: Colors.deepPurple[600],
                 ),
               ),
@@ -98,6 +116,11 @@ class _RippleAnimationState extends State<RippleAnimation>
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radiusController.value),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.8),
+                        offset: const Offset(6, 6)),
+                  ],
                   color: const Color.fromARGB(186, 219, 75, 192),
                 ),
               ),
@@ -109,6 +132,13 @@ class _RippleAnimationState extends State<RippleAnimation>
                 height: 160,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radiusController.value),
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(186, 219, 75, 192)
+                            .withOpacity(0.4),
+                        offset: const Offset(-6, 6)),
+                  ],
+
                   // color: Colors.deepPurple[400],
                   color: const Color.fromARGB(144, 136, 39, 119),
                 ),
@@ -182,28 +212,6 @@ class _RippleAnimationState extends State<RippleAnimation>
                 ),
               ),
             ),
-            // Transform.rotate(
-            //   angle: _rotationController.value,
-            //   child: Container(
-            //     width: 200,
-            //     height: 200,
-            //     decoration: BoxDecoration(
-            //       borderRadius: BorderRadius.circular(_radiusController.value),
-            //       color: Colors.deepPurple[400],
-            //     ),
-            //   ),
-            // ),
-            // Transform.rotate(
-            //   angle: _rotationController.value,
-            //   child: Container(
-            //     width: 200,
-            //     height: 200,
-            //     decoration: BoxDecoration(
-            //       borderRadius: BorderRadius.circular(_radiusController.value),
-            //       color: Colors.deepPurple[400],
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
