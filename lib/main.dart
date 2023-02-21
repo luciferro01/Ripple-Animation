@@ -96,16 +96,17 @@ class _RippleAnimationState extends State<RippleAnimation>
             Transform.rotate(
               angle: _rotationController.value + 0.2,
               child: Container(
-                width: 240,
-                height: 240,
+                width: 250,
+                height: 250,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radiusController.value),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.black.withOpacity(0.6),
-                        offset: const Offset(6, 6)),
+                      color: Colors.black.withOpacity(0.6),
+                      offset: const Offset(6, 6),
+                    ),
                   ],
-                  color: Colors.deepPurple[600],
+                  color: Colors.deepPurple[500],
                 ),
               ),
             ),
@@ -116,11 +117,11 @@ class _RippleAnimationState extends State<RippleAnimation>
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radiusController.value),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black.withOpacity(0.8),
-                        offset: const Offset(6, 6)),
-                  ],
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //       color: Colors.deepPurple[300]!.withOpacity(0.8),
+                  //       offset: const Offset(6, 6)),
+                  // ],
                   color: const Color.fromARGB(186, 219, 75, 192),
                 ),
               ),
@@ -134,9 +135,9 @@ class _RippleAnimationState extends State<RippleAnimation>
                   borderRadius: BorderRadius.circular(_radiusController.value),
                   boxShadow: [
                     BoxShadow(
-                        color: const Color.fromARGB(186, 219, 75, 192)
-                            .withOpacity(0.4),
-                        offset: const Offset(-6, 6)),
+                        // color: const Color.fromARGB(186, 219, 75, 192)
+                        color: Colors.black.withOpacity(0.4),
+                        offset: const Offset(-2, -2)),
                   ],
 
                   // color: Colors.deepPurple[400],
