@@ -1,4 +1,4 @@
-# cool_animations
+# Ripple Animations
 
 A new Flutter project.
 
